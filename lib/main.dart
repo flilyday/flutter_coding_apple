@@ -10,26 +10,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar( title : Text('앱임')),
-          // body: Container(
-          //   width:150, height: 50, color: Colors.blue,
-          //    // margin: EdgeInsets.all(20), //바깥여백
-          //    // padding: EdgeInsets.all(20), //패딩
-          //    //  margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
-          //    //  decoration: BoxDecoration(
-          //    //    border: Border.all(color: Colors.black) //테두리 주고 싶을 때
-          //    //  ),
-          //   child: Text('textTest')
-          // ),
-        body: Align(
-          alignment: Alignment.topCenter,
-          child: Container(
-            width: double.infinity, height: 50, color: Colors.blue,
-          )
-        )
-
-      )
+     home: Scaffold(
+       appBar: AppBar( actions : [Icon(Icons.star), Icon(Icons.star),], leading: Icon(Icons.star), title: Text('Leading')),
+      //  body: SizedBox(
+      //    child: Text('안녕하세요',
+      //     // style:TextStyle(color: Color(0xffaaaaaa)),
+      //     // style: TextStyle(fontSize: 30),
+      //     // style: TextStyle( fontWeight: FontWeight.w700),
+      //  ),
+      // ),
+       body: SizedBox(
+         child: IconButton(
+          icon: Icon(Icons.star),
+           onPressed: (){}
+         )
+         ),
+       )
     );
-  }
+}
 }
