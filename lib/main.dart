@@ -12,18 +12,32 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
      home: Scaffold(
        appBar: AppBar(),
-       body: Row(
-         // children: [
-         //   Flexible(child: Container(color: Colors.blue), flex: 5),
-         //   Flexible(child: Container(color: Colors.green), flex: 5),
-         //   Flexible(child: Container(color: Colors.red), flex: 5),
-         // ] //flex로 단 나누기
-
-         children: [
-           Expanded(child: Container(color: Colors.blue)),
-           Container(width : 100, color: Colors.green),
-         ],
-
+       body: Container(
+         height: 150,
+         padding: EdgeInsets.all(30),
+         child : Row(
+           children: [
+             Image.asset('camera.jpg', width: 150,),
+             Container(
+               width: 300,
+               child: Column(
+                 crossAxisAlignment: CrossAxisAlignment.start,
+                 children: [
+                   Text('카메라팝니다.'),
+                   Text('금호동 3가'),
+                   Text('7,000원'),
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.end,
+                     children: [
+                       Icon(Icons.favorite),
+                       Text('3')
+                     ],
+                   )
+                 ],
+               )
+             )
+           ],
+         )
        )
      )
     );
