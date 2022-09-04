@@ -11,21 +11,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
      home: Scaffold(
-       appBar: AppBar( actions : [Icon(Icons.star), Icon(Icons.star),], leading: Icon(Icons.star), title: Text('Leading')),
-      //  body: SizedBox(
-      //    child: Text('안녕하세요',
-      //     // style:TextStyle(color: Color(0xffaaaaaa)),
-      //     // style: TextStyle(fontSize: 30),
-      //     // style: TextStyle( fontWeight: FontWeight.w700),
-      //  ),
-      // ),
-       body: SizedBox(
-         child: IconButton(
-          icon: Icon(Icons.star),
-           onPressed: (){}
-         )
-         ),
+       appBar: AppBar(),
+       body: Row(
+         // children: [
+         //   Flexible(child: Container(color: Colors.blue), flex: 5),
+         //   Flexible(child: Container(color: Colors.green), flex: 5),
+         //   Flexible(child: Container(color: Colors.red), flex: 5),
+         // ] //flex로 단 나누기
+
+         children: [
+           Expanded(child: Container(color: Colors.blue)),
+           Container(width : 100, color: Colors.green),
+         ],
+
        )
+     )
     );
-}
+  }
 }
