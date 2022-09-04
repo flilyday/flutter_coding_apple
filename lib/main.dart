@@ -12,20 +12,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar( title : Text('앱임')),
-          body: Text('안녕'),
-          bottomNavigationBar: BottomAppBar(
-            child: SizedBox(
-              height: 70,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Icon(Icons.phone),
-                  Icon(Icons.message),
-                  Icon(Icons.contact_page),
-                ],
-              ),
-            ),
-          ),
+          // body: Container(
+          //   width:150, height: 50, color: Colors.blue,
+          //    // margin: EdgeInsets.all(20), //바깥여백
+          //    // padding: EdgeInsets.all(20), //패딩
+          //    //  margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
+          //    //  decoration: BoxDecoration(
+          //    //    border: Border.all(color: Colors.black) //테두리 주고 싶을 때
+          //    //  ),
+          //   child: Text('textTest')
+          // ),
+        body: Align(
+          alignment: Alignment.topCenter,
+          child: Container(
+            width: double.infinity, height: 50, color: Colors.blue,
+          )
+        )
+
       )
     );
   }
